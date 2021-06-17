@@ -1,18 +1,23 @@
 package pl.pjatk.RentalService;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import pl.pjatk.RentalService.ExceptionHandler.RestTemplateResponseErrorHandler;
 
 @Service
 @Configuration
 public class BeanConfig {
 
+    RestTemplate restTemplate;
+
     @Bean
     public RestTemplate restTemplate(){
-        RestTemplate restTemplate = new RestTemplate();
-        return restTemplate;
+        return new RestTemplateBuilder().errorHandler(new RestTemplateResponseErrorHandler())
+                .build();
     }
 
     @Bean

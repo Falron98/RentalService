@@ -1,7 +1,12 @@
 package pl.pjatk.RentalService;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.net.ConnectException;
 
 @Service
 @RestController
@@ -24,4 +29,18 @@ public class RentalRestController {
         rentalService.returnMovie(id);
     }
 
+    @GetMapping("test")
+    public void test(){
+        rentalService.test();
+    }
+
+    @GetMapping("test2")
+    public void test2(){
+            rentalService.test2();
+    }
+
+    @GetMapping("test3")
+    public void test3(){
+        rentalService.test3();
+    }
 }
