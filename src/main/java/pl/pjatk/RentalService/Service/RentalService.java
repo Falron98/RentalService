@@ -1,14 +1,10 @@
-package pl.pjatk.RentalService;
+package pl.pjatk.RentalService.Service;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import pl.pjatk.RentalService.Exception.ConnectException;
 import pl.pjatk.RentalService.ExceptionHandler.RestTemplateResponseErrorHandler;
+import pl.pjatk.RentalService.Movie;
 
 @Service
 public class RentalService {

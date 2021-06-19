@@ -1,12 +1,9 @@
-package pl.pjatk.RentalService;
+package pl.pjatk.RentalService.RestController;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.net.ConnectException;
+import pl.pjatk.RentalService.Movie;
+import pl.pjatk.RentalService.Service.RentalService;
 
 @Service
 @RestController

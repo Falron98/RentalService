@@ -1,4 +1,4 @@
-package pl.pjatk.RentalService;
+package pl.pjatk.RentalService.ExceptionHandler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
